@@ -1,78 +1,139 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
-    <style>
-        /* Add your CSS styles here */
-    </style>
+    <title>Josiah's Portfolio</title>
+    <link rel="stylesheet" href="C:\Users\Josia\Desktop\SFPracticeAppsKU9V\bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+
+
+
 </head>
+
+
 <body>
-    <header>
+       
+    <header class="pink-border">
         <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div>
+            <nav>
+                <ul class="no-bullets">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="about">
+
+        <section id="about" class="pink-border">
             <h2>About Me</h2>
-            <p>Write a brief description about yourself and your skills.</p>
+
+            <div class="accordion" id="accordionAboutMe">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-1">
+                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            
+                        </button>
+
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse accord-white-text " data-bs-parent="#accordionAboutMe">
+                        <div class="accordion-body">
+                            <nav >
+                                About Me:
+
+                                I'm Josiah Pettie, a software developer in training with a deep passion for technology and a drive to create efficient and innovative solutions. Over the past two years, I have been on an exciting journey of self-learning, focusing on Swift, Python, and JavaScript. What started as a quest to streamline work processes as a technician quickly grew into a full-blown passion for coding.
+
+
+                                Beyond the world of programming, I find joy in various hobbies. Video games provide me with a creative outlet and a way to unwind. Superhero movies have always captivated my imagination, and I find inspiration in their stories of overcoming challenges and making a positive impact. Swing dancing is another passion of mine, as it allows me to express myself rhythmically and connect with others through the joy of dance.
+
+
+                                Above all, my dedication to family is an integral part of who I am. Spending quality time with loved ones brings me immense happiness and serves as a reminder of what truly matters in life.
+
+
+                                Currently, I am delving into the fascinating realm of artificial intelligence (AI) to explore how it can further enhance productivity and revolutionize the way we work. With a keen interest in leveraging AI's potential, I am excited to contribute to the development of intelligent systems that can empower individuals and businesses alike.
+
+
+                                As I continue my journey as a software developer, I strive to combine my technical skills, creativity, and passion for problem-solving to make a meaningful impact in the world. Connect with me on my GitHub profile to explore my projects and join me on this exciting path of continuous learning and growth.
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
 
-        <section id="projects">
+        <section id="projects" class="project">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>This is the JavaScript CRUD App Part 1 </p>
 
-                    <label id="changeme">42</label>
+            <div class="inner-pink-border">
+                <div>
+                    <div class="white-text">
+                        <h3>
+                            Counter Demo
+                        </h3>
 
-                <button onclick="updateLabelPlus()" id="myButton1">Click Me +</button>
-                <button onclick="updateLabelMinus()" id="myButton2">Click Me -</button>
+                    </div>
+
+
+                    <h3>
+                        <label id="changeme" class="white-text">42</label>
+                    </h3>
+
+                    <button onclick="updateLabelPlus()" id="myButton1">Click Me +</button>
+                    <button onclick="updateLabelMinus()" id="myButton2">Click Me -</button>
+                </div>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>This is the JavaScript CRUD App Part 2</p>
-                <!--create list of items that can be updated by a user input field.-->
-                <ul>
-                    <!-- ask ChatbotGPT-->
 
+            <br />
+            <br />
 
-                </ul>
+            <div class="inner-pink-border">
+                <div class="white-text">
+                    <h3>
+                        To Do List
+                    </h3>
+                </div>
+               
+
+                <ol class="white-text" id="itemList">
+                </ol>
                 
+                <input type="text" id="itemInput" placeholder="Enter an item">                            
+                <input type="text" id="itemReplace" placeholder="Enter Updated text">
+                    
+                <br />            
                 <button onclick="addToList()" id="myButton3">Add</button>
                 <button onclick="deleteFromList()" id="myButton4">Delete</button>
-
+                <button onclick="updateList()" id="myButton5">Update</button>
+                <button onclick="deleteAll()" id="myButton6">Clear List</button>
             </div>
-            <!-- Add more project sections as needed -->
+      
+
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+        <section id="contact" class="contact">
+            <button type="button" class="btn btn-lg" data-bs-toggle="popover" data-bs-title="I would like to work with you!" data-bs-content="josiah.pettie@gmail.com">
+                <h2 class="white-text">Contact Me</h2>
+                
+            </button>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2023 My Portfolio</p>
     </footer>
 
     <script src="index.js"></script>
+    <script src= "https://unpkg.com/@popperjs/core@2"></script>
+    <script src="C:\Users\Josia\Desktop\SFPracticeAppsKU9V\bootstrap.min.js"></script>
+    <script>
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    </script>
+
 </body>
+
 </html>
